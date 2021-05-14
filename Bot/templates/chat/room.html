@@ -5,4 +5,6 @@
   <input id="chat-message-input" type="text" />
   <input id="chat-message-submit" type="submit" value="Send" />
 </div>
-{% endblock %} {% block domready %} {% endblock %}
+{% endblock %} {% block domready %} var url = 'ws://' + window.location.host +
+'/ws/chat/room/' + '{{course.id}}/'; var chatSocket = new WebSocket(url);
+{%endblock %}
