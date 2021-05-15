@@ -1,5 +1,5 @@
 db.sqlite3
 /migrations/
 slugs/fixtures/groups.json
-
+/htmlcov/
 Note.md
