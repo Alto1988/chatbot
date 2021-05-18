@@ -41,7 +41,7 @@ class Module(models.Model):
         Groups, related_name='modules', on_delete=models.CASCADE)
 
     title = models.CharField(max_length=200)
-    order = OrderField(blank=True, for_fields=['groups'], default=0)
+    order = OrderField(blank=True, for_fields=['groups'])
 
     def __str__(self):
         return self.title
@@ -57,7 +57,7 @@ class Content(models.Model):
 
     object_id = models.PositiveIntegerField()
     item = GenericForeignKey('content_type', 'object_id')
-    order = OrderField(blank=True, for_fields=['module'], default=0)
+    order = OrderField(blank=True, for_fields=['module'])
 
 # Don't like the name of this class need to change it
 
